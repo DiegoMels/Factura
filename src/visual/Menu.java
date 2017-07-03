@@ -16,9 +16,9 @@ import javax.swing.*;
  * @author leona
  */
 public class Menu extends JFrame {
-    ControladorMenu controlador = new ControladorMenu();
-    ControladorAceptar controladorAceptar = new ControladorAceptar();
-    GridLayout contenedor = new GridLayout(0,2);
+    private ControladorMenu controlador = new ControladorMenu();
+    private ControladorAceptar controladorAceptar = new ControladorAceptar();
+    private GridLayout contenedor = new GridLayout(0,2);
     
     public Menu() {
         this.setSize(300, 300);
@@ -28,7 +28,7 @@ public class Menu extends JFrame {
         this.setLayout(contenedor);
         this.AgregarComponente();
     }
-    public void AgregarComponente() {
+    private void AgregarComponente() {
         JButton aceptar = new JButton();
         aceptar.setName("Aceptar");
         aceptar.setText("Aceptar");
@@ -41,6 +41,8 @@ public class Menu extends JFrame {
         salir.setText("Salir");
         salir.setVisible(true);
         
+        
+        // para poder agregar a JFrame (ocea, ya lo cree anteriormente pero ahora los estoy haciendo aceptar por el programa.
         this.add(aceptar);
         this.add(salir);
         this.setVisible(true);
